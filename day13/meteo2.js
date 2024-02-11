@@ -1,4 +1,3 @@
-
 const cities = [
     { name: 'New York', lat: 40.7128, lng: -74.0060 },
     { name: 'London', lat: 51.5074, lng: -0.1278 },
@@ -12,37 +11,41 @@ const cities = [
     { name: 'Rabat', lat: 34.0209, lng: -6.8416 }
 ];
 
-
+// Function to select a random city from the list
 function selectRandomCity(cities) {
     const randomIndex = Math.floor(Math.random() * cities.length);
     return cities[randomIndex];
 }
 
-const selectedCity = selectRandomCity(cities);
-console.log(selectedCity)
+// Function to fetch temperature data for a selected city
 async function fetchDataTemperatureByCity(selectedCity) {
     const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${selectedCity.lat}&longitude=${selectedCity.lng}&current_weather=true`;
 
     try {
+        // Fetch data from the API
         const data = await fetch(apiUrl);
+
+        // Parse the JSON response
         const response = await data.json();
-        if (response) {
+
+        // Check if the response is valid
+        if (response && response.current_weather) {
+            // Extract temperature from the response
             const temperature = response.current_weather.temperature;
-            return temperature;
-            console.log(`la   temperature au  ${selectedCity.name} est ${temperature}°C`);
+
+            // Display the city name and temperature to the user
+            console.log(`The temperature in ${selectedCity.name} is ${temperature}°C`);
         } else {
-            throw new Error(`Error fetching: ${data.message}`);
+            // Handle error if the response is not as expected
+            throw new Error(`Error fetching temperature data for ${selectedCity.name}`);
         }
     } catch (error) {
-        console.log('Error:', error.message);
-      
+        // Handle any errors that occurred during the fetch or processing
+        console.error('Error:', error.message);
+        throw error;
     }
 }
 
+// Call the functions to select a random city and fetch temperature data
+const selectedCity = selectRandomCity(cities);
 fetchDataTemperatureByCity(selectedCity);
-module.exports = {
-    cities,
-    selectRandomCity,
-    fetchDataTemperatureByCity,
-};
-  
