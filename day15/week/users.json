@@ -1,0 +1,101 @@
+[
+  {
+    "accountID": "ACC1001",
+    "name": "John Doe",
+    "pin": "1234",
+    "balance": 1500,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 500,
+        "date": "2024-02-01"
+      },
+      {
+        "type": "withdraw",
+        "amount": 200,
+        "date": "2024-02-02"
+      }
+    ]
+  },
+  {
+    "accountID": "ACC1002",
+    "name": "Jane Smith",
+    "pin": "4321",
+    "balance": 2200,
+    "transactions": [
+      {
+        "type": "deposit",
+        "amount": 1000,
+        "date": "2024-02-03"
+      },
+      {
+        "type": "withdraw",
+        "amount": 300,
+        "date": "2024-02-04"
+      }
+    ]
+  },
+  {
+    "ID de compte": "c5afac6b-9a74-44d0-953d-27c6d8a62c92",
+    "nom": "aissame",
+    "épingle": "6963",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "ID de compte": "747eca9a-30da-41b5-9d56-3be3a699bf5f",
+    "nom": "aissame",
+    "épingle": "1230",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "ID de compte": "1707771702170247",
+    "nom": "aissame",
+    "épingle": "7930",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "ID de compte": "1707772318131233",
+    "nom": "saad",
+    "épingle": "3002",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "ID de compte": "1707772355189381",
+    "nom": "saad",
+    "épingle": "6386",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "ID de compte": "1707772601665900",
+    "nom": "abdo",
+    "épingle": "3073",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "ID de compte": "1707772638277701",
+    "nom": "s",
+    "épingle": "3360",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "ID de compte": "1707812275666611",
+    "nom": "chaimaa",
+    "épingle": "6298",
+    "solde": 0,
+    "transactions": []
+  },
+  {
+    "Account ID": "1707813090811116",
+    "name": "saad",
+    "pin": "6839",
+    "balance": 0,
+    "transactions": []
+  }
+]
